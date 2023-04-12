@@ -1,0 +1,9 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/ravis/source/repos/CEE575/b3_proj/printer/printer.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+C:/Users/ravis/source/repos/CEE575/b3_proj/printer/printer.srcs/sources_1/imports/hdl/debouncer.v,1681195574,verilog,,C:/Users/ravis/source/repos/CEE575/b3_proj/printer/printer.srcs/sources_1/imports/hdl/uart_buf_con.v,,debouncer,,,,,,,,
+C:/Users/ravis/source/repos/CEE575/b3_proj/printer/printer.srcs/sources_1/imports/hdl/uart_buf_con.v,1681183533,verilog,,C:/Users/ravis/source/repos/CEE575/b3_proj/printer/printer.srcs/sources_1/imports/hdl/uart_tx.v,,uart_buf_con,,,,,,,,
+C:/Users/ravis/source/repos/CEE575/b3_proj/printer/printer.srcs/sources_1/imports/hdl/uart_tx.v,1681183533,verilog,,C:/Users/ravis/source/repos/CEE575/b3_proj/printer/printer.srcs/sources_1/new/top.v,,uart_tx,,,,,,,,
+C:/Users/ravis/source/repos/CEE575/b3_proj/printer/printer.srcs/sources_1/new/top.v,1681192371,verilog,,,,top,,,,,,,,

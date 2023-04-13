@@ -51,6 +51,9 @@ module top(
     wire [15:0] ADC_data;
     wire ADC_ready;
     
+    // smoother signals
+    wire smooth_ready;
+    wire [15:0] smooth_data;
     
     // Read Data in from ADC
     xadc_wiz_0  XLXI_7 (
@@ -100,11 +103,21 @@ module top(
             endcase
         end
     end
-
-    //fill the convert uart buffer when data available
+    
+     //instantiate data smoother
+    rect_smoother rs0 (
+        .clk(CLK),
+        .valid_in(ADC_ready),
+        .data_in(ADC_data),
+        .valid_out(smooth_ready),
+        .data_out(smooth_data)
+    );
+    
+    
+    // prepare the uart buffer for transmission
     always @(posedge CLK) begin
-        if (ADC_ready) begin
-            uart_buf <= {16'h0, ADC_data};
+        if (smooth_ready) begin
+            uart_buf <= {16'h0, smooth_data};
             start <= 1;
             bcount <= 2;
         end

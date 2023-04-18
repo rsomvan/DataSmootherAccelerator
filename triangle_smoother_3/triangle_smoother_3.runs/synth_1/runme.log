@@ -1,0 +1,268 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 429.953 ; gain = 108.895
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21260
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1245.691 ; gain = 406.984
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/imports/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.runs/synth_1/.Xil/Vivado-16984-Laptop/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.runs/synth_1/.Xil/Vivado-16984-Laptop/realtime/xadc_wiz_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'eos_out' of module 'xadc_wiz_0' is unconnected for instance 'XLXI_7' [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/imports/sources_1/new/top.v:59]
+WARNING: [Synth 8-7023] instance 'XLXI_7' of module 'xadc_wiz_0' has 22 connections declared, but only 21 given [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/imports/sources_1/new/top.v:59]
+INFO: [Synth 8-6157] synthesizing module 'tri_smoother' [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/new/tri_smoother.v:22]
+WARNING: [Synth 8-324] index 2 out of range [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/new/tri_smoother.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'tri_smoother' (0#1) [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/new/tri_smoother.v:22]
+INFO: [Synth 8-6157] synthesizing module 'uart_buf_con' [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/imports/sources_1/imports/hdl/uart_buf_con.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_buf_con' (0#1) [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/imports/sources_1/imports/hdl/uart_buf_con.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/imports/sources_1/imports/hdl/uart_tx.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/imports/sources_1/imports/hdl/uart_tx.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/imports/sources_1/new/top.v:23]
+WARNING: [Synth 8-6014] Unused sequential element data_hldr_reg[1] was removed.  [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/new/tri_smoother.v:46]
+WARNING: [Synth 8-6014] Unused sequential element data_hldr_reg[0] was removed.  [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/sources_1/new/tri_smoother.v:46]
+WARNING: [Synth 8-7129] Port data_in[15] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[14] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[13] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[12] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[11] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[10] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[9] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[8] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[7] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[6] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1] in module tri_smoother is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0] in module tri_smoother is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1337.023 ; gain = 498.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1337.023 ; gain = 498.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1337.023 ; gain = 498.316
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1337.023 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'XLXI_7'
+Finished Parsing XDC File [c:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'XLXI_7'
+Parsing XDC File [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/constrs_1/imports/constraints/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/constrs_1/imports/constraints/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.srcs/constrs_1/imports/constraints/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1443.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1443.703 ; gain = 0.000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for XLXI_7. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |xadc_wiz_0    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |xadc_wiz |     1|
+|2     |BUFG     |     1|
+|3     |CARRY4   |     4|
+|4     |LUT1     |     2|
+|5     |LUT2     |     8|
+|6     |LUT3     |     4|
+|7     |LUT4     |    21|
+|8     |LUT5     |     8|
+|9     |LUT6     |     3|
+|10    |FDRE     |    47|
+|11    |FDSE     |     4|
+|12    |IBUF     |    11|
+|13    |OBUF     |    17|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1443.703 ; gain = 604.996
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 1443.703 ; gain = 498.316
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1443.703 ; gain = 604.996
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1443.703 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1443.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 452de838
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 1443.703 ; gain = 980.836
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ravis/source/repos/CEE575/b3_proj/triangle_smoother_3/triangle_smoother_3.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 16 22:02:11 2023...

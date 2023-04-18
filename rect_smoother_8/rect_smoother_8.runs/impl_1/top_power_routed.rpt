@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Mon Apr 17 17:55:39 2023
+| Date             : Tue Apr 18 01:21:26 2023
 | Host             : Laptop running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.111        |
+| Total On-Chip Power (W)  | 0.113        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.039        |
+| Dynamic (W)              | 0.041        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.4         |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.006 |        3 |       --- |             --- |
-| Slice Logic    |     0.012 |     4855 |       --- |             --- |
-|   LUT as Logic |     0.010 |     1283 |     20800 |            6.17 |
+| Slice Logic    |     0.013 |     4871 |       --- |             --- |
+|   LUT as Logic |     0.011 |     1279 |     20800 |            6.15 |
 |   CARRY4       |     0.001 |      307 |      8150 |            3.77 |
 |   Register     |    <0.001 |     2311 |     41600 |            5.56 |
-|   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |     0.013 |     4623 |       --- |             --- |
+|   Others       |     0.000 |       25 |       --- |             --- |
+| Signals        |     0.014 |     4622 |       --- |             --- |
 | I/O            |     0.006 |       26 |       106 |           24.53 |
 | XADC           |     0.002 |        1 |       --- |             --- |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.111 |          |           |                 |
+| Total          |     0.113 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.041 |       0.031 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.043 |       0.033 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -138,12 +138,20 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------+-----------+
-| Name     | Power (W) |
-+----------+-----------+
-| top      |     0.039 |
-|   XLXI_7 |     0.002 |
-|   rs0    |     0.030 |
-+----------+-----------+
++--------------------+-----------+
+| Name               | Power (W) |
++--------------------+-----------+
+| top                |     0.041 |
+|   XLXI_7           |     0.002 |
+|   rs0              |     0.032 |
+|     genblk1[0].ds0 |     0.002 |
+|     genblk1[1].ds0 |     0.002 |
+|     genblk1[2].ds0 |     0.002 |
+|     genblk1[3].ds0 |     0.002 |
+|     genblk1[4].ds0 |     0.002 |
+|     genblk1[5].ds0 |     0.002 |
+|     genblk1[6].ds0 |     0.002 |
+|     genblk1[7].ds0 |     0.002 |
++--------------------+-----------+
 
 

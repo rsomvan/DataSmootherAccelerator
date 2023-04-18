@@ -18,7 +18,8 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
+`define DELAY_NUM 33333
+`define DELAY_BITS 17
 
 module top(
     input CLK,
@@ -36,7 +37,8 @@ module top(
     output UART_TXD
     );
 
-
+    //DELAY SIGNAL
+    reg [`DELAY_BITS - 1:0] delay_cnt=0;
     // signals for UART
     wire        tready;
     wire        ready;
@@ -104,10 +106,21 @@ module top(
         end
     end
     
+    // DELAY Loop
+    always @(posedge CLK) begin
+        if (delay_cnt > `DELAY_NUM) begin
+            if (ADC_ready) begin
+                delay_cnt <= 0;
+            end
+        end
+        else begin
+            delay_cnt <= delay_cnt + 1;
+        end
+    end
      //instantiate data smoother
     rect_smoother rs0 (
         .clk(CLK),
-        .valid_in(ADC_ready),
+        .valid_in(ADC_ready && (delay_cnt > `DELAY_NUM)),
         .data_in(ADC_data),
         .valid_out(smooth_ready),
         .data_out(smooth_data)

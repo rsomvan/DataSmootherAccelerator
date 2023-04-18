@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Wed Apr 12 15:36:42 2023
+| Date             : Mon Apr 17 13:43:29 2023
 | Host             : Laptop running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -58,7 +58,7 @@ Table of Contents
 |   Register     |    <0.001 |       84 |     41600 |            0.20 |
 |   CARRY4       |    <0.001 |        4 |      8150 |            0.05 |
 |   Others       |     0.000 |        7 |       --- |             --- |
-| Signals        |    <0.001 |      141 |       --- |             --- |
+| Signals        |    <0.001 |      140 |       --- |             --- |
 | I/O            |     0.006 |       26 |       106 |           24.53 |
 | XADC           |     0.002 |        1 |       --- |             --- |
 | Static Power   |     0.072 |          |           |                 |

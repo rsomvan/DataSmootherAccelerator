@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Wed Apr 12 15:35:18 2023
+| Date         : Mon Apr 17 13:42:18 2023
 | Host         : Laptop running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               5 |            2 |
+| No           | No                    | No                     |               5 |            3 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              32 |            9 |
-| Yes          | No                    | No                     |              42 |           12 |
+| No           | Yes                   | No                     |              32 |            7 |
+| Yes          | No                    | No                     |              42 |           13 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               5 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -74,13 +74,13 @@ Table of Contents
 |  Clock Signal  |      Enable Signal      |     Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+-------------------------+-------------------------+------------------+----------------+--------------+
 |  CLK_IBUF_BUFG | XLXI_7/drdy_out         | LED[12]_i_1_n_0         |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG | get_tx/E[0]             |                         |                1 |              4 |         4.00 |
 |  CLK_IBUF_BUFG | get_tx/count            | get_tx/p_0_in           |                1 |              4 |         4.00 |
-|  CLK_IBUF_BUFG |                         |                         |                2 |              5 |         2.50 |
+|  CLK_IBUF_BUFG | get_tx/E[0]             |                         |                2 |              4 |         2.00 |
+|  CLK_IBUF_BUFG |                         |                         |                3 |              5 |         1.67 |
 |  CLK_IBUF_BUFG | get_tx/shift[7]_i_1_n_0 |                         |                2 |              8 |         4.00 |
 |  CLK_IBUF_BUFG | XLXI_7/drdy_out         |                         |                5 |             14 |         2.80 |
+|  CLK_IBUF_BUFG |                         | uart_buf[15]_i_1_n_0    |                3 |             16 |         5.33 |
 |  CLK_IBUF_BUFG |                         | get_tx/shift[7]_i_1_n_0 |                4 |             16 |         4.00 |
-|  CLK_IBUF_BUFG |                         | ascii_buf[15]_i_1_n_0   |                5 |             16 |         3.20 |
 |  CLK_IBUF_BUFG | get_tx/running_reg_1[0] |                         |                4 |             16 |         4.00 |
 +----------------+-------------------------+-------------------------+------------------+----------------+--------------+
 

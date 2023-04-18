@@ -30,7 +30,7 @@ output = 0
 for i, sample in enumerate(h):
     print(f"{i} -> {int(sample * (1 << 15))}")
     if i != 0 and i != 5 and i != 15 and i != 20:
-        output += (576*int(sample * (1 << 15))) / 32768
+        output += (60000*int(sample * (1 << 15))) / 32768
     x[i] = i
 
 

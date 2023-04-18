@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -86,6 +88,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  C:/Users/ravis/source/repos/CEE575/b3_proj/rect_smoother_8/rect_smoother_8.srcs/sources_1/new/rect_smoother.v
   C:/Users/ravis/source/repos/CEE575/b3_proj/rect_smoother_8/rect_smoother_8.srcs/sources_1/imports/sources_1/imports/hdl/uart_buf_con.v
   C:/Users/ravis/source/repos/CEE575/b3_proj/rect_smoother_8/rect_smoother_8.srcs/sources_1/imports/sources_1/imports/hdl/uart_tx.v
   C:/Users/ravis/source/repos/CEE575/b3_proj/rect_smoother_8/rect_smoother_8.srcs/sources_1/imports/sources_1/new/top.v
@@ -109,6 +112,8 @@ set_property used_in_implementation false [get_files C:/Users/ravis/source/repos
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/ravis/source/repos/CEE575/b3_proj/rect_smoother_8/rect_smoother_8.srcs/utils_1/imports/synth_1/top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

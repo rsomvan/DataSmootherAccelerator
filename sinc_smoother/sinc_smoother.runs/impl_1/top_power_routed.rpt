@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Mon Apr 17 02:04:49 2023
+| Date             : Tue Apr 25 18:00:44 2023
 | Host             : Laptop running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.105        |
+| Total On-Chip Power (W)  | 0.082        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.034        |
+| Dynamic (W)              | 0.010        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.5         |
-| Junction Temperature (C) | 25.5         |
+| Max Ambient (C)          | 84.6         |
+| Junction Temperature (C) | 25.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,22 +49,23 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.006 |      700 |       --- |             --- |
-|   LUT as Logic |     0.006 |      330 |     20800 |            1.59 |
-|   CARRY4       |    <0.001 |       64 |      8150 |            0.79 |
-|   Register     |    <0.001 |      105 |     41600 |            0.25 |
-|   Others       |     0.000 |       11 |       --- |             --- |
-| Signals        |     0.008 |     1470 |       --- |             --- |
-| DSPs           |     0.010 |       16 |        90 |           17.78 |
-| I/O            |     0.006 |       26 |       106 |           24.53 |
-| XADC           |     0.002 |        1 |       --- |             --- |
-| Static Power   |     0.072 |          |           |                 |
-| Total          |     0.105 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.001 |        3 |       --- |             --- |
+| Slice Logic             |    <0.001 |      535 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |       93 |     20800 |            0.45 |
+|   CARRY4                |    <0.001 |       17 |      8150 |            0.21 |
+|   Register              |    <0.001 |      360 |     41600 |            0.87 |
+|   LUT as Shift Register |    <0.001 |       17 |      9600 |            0.18 |
+|   Others                |     0.000 |       11 |       --- |             --- |
+| Signals                 |    <0.001 |     1404 |       --- |             --- |
+| DSPs                    |     0.004 |       17 |        90 |           18.89 |
+| I/O                     |     0.003 |       26 |       106 |           24.53 |
+| XADC                    |    <0.001 |        1 |       --- |             --- |
+| Static Power            |     0.072 |          |           |                 |
+| Total                   |     0.082 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -73,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.036 |       0.026 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.016 |       0.007 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -85,7 +86,7 @@ Table of Contents
 | Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccadc    |       1.800 |     0.021 |       0.001 |      0.020 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 
 
@@ -129,7 +130,7 @@ Table of Contents
 +-------------+--------+-----------------+
 | Clock       | Domain | Constraint (ns) |
 +-------------+--------+-----------------+
-| sys_clk_pin | CLK    |            10.0 |
+| sys_clk_pin | CLK    |            20.0 |
 +-------------+--------+-----------------+
 
 
@@ -142,9 +143,9 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| top      |     0.034 |
-|   XLXI_7 |     0.002 |
-|   ss0    |     0.024 |
+| top      |     0.010 |
+|   XLXI_7 |     0.001 |
+|   ss0    |     0.006 |
 +----------+-----------+
 
 

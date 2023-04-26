@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\ravis\source\repos\CEE575\b3_proj\sinc_smoother_2\sinc_smoother_2.runs\synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied

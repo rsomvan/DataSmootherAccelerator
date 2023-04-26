@@ -18,7 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`define DELAY_NUM 33333
+`define DELAY_NUM 100000
 `define DELAY_BITS 17
 
 module top(

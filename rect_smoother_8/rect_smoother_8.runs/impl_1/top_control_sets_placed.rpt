@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue Apr 18 01:20:08 2023
+| Date         : Tue Apr 25 16:18:35 2023
 | Host         : Laptop running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -61,7 +61,7 @@ Table of Contents
 | No           | No                    | No                     |             167 |           43 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              32 |            9 |
-| Yes          | No                    | No                     |            2090 |          438 |
+| Yes          | No                    | No                     |            2090 |          430 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |              22 |            7 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -74,16 +74,16 @@ Table of Contents
 |  Clock Signal  |      Enable Signal      |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+-------------------------+---------------------------+------------------+----------------+--------------+
 |  CLK_IBUF_BUFG | XLXI_7/drdy_out         | LED[12]_i_1_n_0           |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG | get_tx/E[0]             |                           |                1 |              4 |         4.00 |
 |  CLK_IBUF_BUFG | get_tx/count            | get_tx/p_0_in             |                1 |              4 |         4.00 |
-|  CLK_IBUF_BUFG | get_tx/shift[7]_i_1_n_0 |                           |                2 |              8 |         4.00 |
-|  CLK_IBUF_BUFG | XLXI_7/drdy_out         |                           |                7 |             14 |         2.00 |
+|  CLK_IBUF_BUFG | get_tx/running_reg_1[0] |                           |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG | get_tx/shift[7]_i_1_n_0 |                           |                3 |              8 |         2.67 |
+|  CLK_IBUF_BUFG | XLXI_7/drdy_out         |                           |                4 |             14 |         3.50 |
 |  CLK_IBUF_BUFG |                         | rs0/valid_in_reg_reg[1]_0 |                5 |             16 |         3.20 |
 |  CLK_IBUF_BUFG |                         | get_tx/shift[7]_i_1_n_0   |                4 |             16 |         4.00 |
-|  CLK_IBUF_BUFG | get_tx/running_reg_2[0] |                           |                7 |             16 |         2.29 |
-|  CLK_IBUF_BUFG | rs0/sel                 | rs0/E[0]                  |                5 |             17 |         3.40 |
+|  CLK_IBUF_BUFG | get_tx/E[0]             |                           |                3 |             16 |         5.33 |
+|  CLK_IBUF_BUFG | sel                     | rs0/E[0]                  |                5 |             17 |         3.40 |
 |  CLK_IBUF_BUFG |                         |                           |               43 |            167 |         3.88 |
-|  CLK_IBUF_BUFG | rs0/E[0]                |                           |              421 |           2048 |         4.86 |
+|  CLK_IBUF_BUFG | rs0/E[0]                |                           |              419 |           2048 |         4.89 |
 +----------------+-------------------------+---------------------------+------------------+----------------+--------------+
 
 

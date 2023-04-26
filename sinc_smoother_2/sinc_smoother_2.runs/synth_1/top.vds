@@ -1,0 +1,1910 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Apr 25 19:19:58 2023
+# Process ID: 16360
+# Current directory: C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.runs/synth_1/top.vds
+# Journal file: C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.runs/synth_1\vivado.jou
+# Running On: Laptop, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 17005 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 430.012 ; gain = 110.777
+Command: read_checkpoint -auto_incremental -incremental C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24392
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1246.910 ; gain = 407.602
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/imports/sources_1/new/top.v:25]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.runs/synth_1/.Xil/Vivado-16360-Laptop/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.runs/synth_1/.Xil/Vivado-16360-Laptop/realtime/xadc_wiz_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'eos_out' of module 'xadc_wiz_0' is unconnected for instance 'XLXI_7' [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/imports/sources_1/new/top.v:63]
+WARNING: [Synth 8-7023] instance 'XLXI_7' of module 'xadc_wiz_0' has 22 connections declared, but only 21 given [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/imports/sources_1/new/top.v:63]
+INFO: [Synth 8-6157] synthesizing module 'sinc_smoother' [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/new/sinc_smoother.v:24]
+WARNING: [Synth 8-324] index 176 out of range [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/new/sinc_smoother.v:299]
+INFO: [Synth 8-6155] done synthesizing module 'sinc_smoother' (0#1) [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/new/sinc_smoother.v:24]
+INFO: [Synth 8-6157] synthesizing module 'uart_buf_con' [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/imports/sources_1/imports/hdl/uart_buf_con.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_buf_con' (0#1) [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/imports/sources_1/imports/hdl/uart_buf_con.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/imports/sources_1/imports/hdl/uart_tx.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/imports/sources_1/imports/hdl/uart_tx.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/imports/sources_1/new/top.v:25]
+WARNING: [Synth 8-6014] Unused sequential element conv_hldr_reg[138] was removed.  [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/new/sinc_smoother.v:299]
+WARNING: [Synth 8-6014] Unused sequential element conv_hldr_reg[38] was removed.  [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/new/sinc_smoother.v:299]
+WARNING: [Synth 8-3936] Found unconnected internal register 'valid_in_reg_reg' and it is trimmed from '3' to '2' bits. [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/sources_1/imports/sources_1/new/sinc_smoother.v:167]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1360.730 ; gain = 521.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1360.730 ; gain = 521.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1360.730 ; gain = 521.422
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.274 . Memory (MB): peak = 1360.730 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'XLXI_7'
+Finished Parsing XDC File [c:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'XLXI_7'
+Parsing XDC File [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/constrs_1/imports/constraints/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/constrs_1/imports/constraints/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.srcs/constrs_1/imports/constraints/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1435.043 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.092 . Memory (MB): peak = 1435.043 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1435.043 ; gain = 595.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1435.043 ; gain = 595.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for XLXI_7. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1435.043 ; gain = 595.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1435.043 ; gain = 595.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  12 Input   31 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               31 Bit    Registers := 11    
+	               16 Bit    Registers := 182   
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 5     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP ss0/conv_hldr_reg[25], operation Mode is: (A''*(B:0x14))'.
+DSP Report: register ss0/data_hldr_reg[24] is absorbed into DSP ss0/conv_hldr_reg[25].
+DSP Report: register ss0/data_hldr_reg[25] is absorbed into DSP ss0/conv_hldr_reg[25].
+DSP Report: register ss0/conv_hldr_reg[25] is absorbed into DSP ss0/conv_hldr_reg[25].
+DSP Report: operator ss0/p_25_out is absorbed into DSP ss0/conv_hldr_reg[25].
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(A''*(B:0xa))'.
+DSP Report: register ss0/data_hldr_reg[13] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/data_hldr_reg[14] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/conv_hldr_reg[14] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_14_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(A''*(B:0x14))'.
+DSP Report: register ss0/data_hldr_reg[23] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/data_hldr_reg[24] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/conv_hldr_reg[24] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_24_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(A''*(B:0x13))'.
+DSP Report: register ss0/data_hldr_reg[22] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/data_hldr_reg[23] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/conv_hldr_reg[23] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_23_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(ACIN*(B:0x12))'.
+DSP Report: register ss0/conv_hldr_reg[22] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_22_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(A''*(B:0x11))'.
+DSP Report: register ss0/data_hldr_reg[20] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/data_hldr_reg[21] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/conv_hldr_reg[21] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_21_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(ACIN*(B:0x10))'.
+DSP Report: register ss0/conv_hldr_reg[20] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_20_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(A''*(B:0xf))'.
+DSP Report: register ss0/data_hldr_reg[18] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/data_hldr_reg[19] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/conv_hldr_reg[19] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_19_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(ACIN*(B:0xe))'.
+DSP Report: register ss0/conv_hldr_reg[18] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_18_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(A''*(B:0xd))'.
+DSP Report: register ss0/data_hldr_reg[16] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/data_hldr_reg[17] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/conv_hldr_reg[17] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_17_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(ACIN*(B:0xc))'.
+DSP Report: register ss0/conv_hldr_reg[16] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_16_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/n_sum_20, operation Mode is: PCIN+(A''*(B:0xb))'.
+DSP Report: register ss0/data_hldr_reg[14] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/data_hldr_reg[15] is absorbed into DSP ss0/n_sum_20.
+DSP Report: register ss0/conv_hldr_reg[15] is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/p_15_out is absorbed into DSP ss0/n_sum_20.
+DSP Report: operator ss0/n_sum_20 is absorbed into DSP ss0/n_sum_20.
+DSP Report: Generating DSP ss0/conv_hldr_reg[152], operation Mode is: (A''*(B:0x14))'.
+DSP Report: register ss0/data_hldr_reg[151] is absorbed into DSP ss0/conv_hldr_reg[152].
+DSP Report: register ss0/data_hldr_reg[152] is absorbed into DSP ss0/conv_hldr_reg[152].
+DSP Report: register ss0/conv_hldr_reg[152] is absorbed into DSP ss0/conv_hldr_reg[152].
+DSP Report: operator ss0/p_150_out is absorbed into DSP ss0/conv_hldr_reg[152].
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(A''*(B:0x4))'.
+DSP Report: register ss0/data_hldr_reg[138] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/data_hldr_reg[139] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/conv_hldr_reg[139] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_137_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(A''*(B:0x14))'.
+DSP Report: register ss0/data_hldr_reg[150] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/data_hldr_reg[151] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/conv_hldr_reg[151] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_149_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(A''*(B:0x14))'.
+DSP Report: register ss0/data_hldr_reg[149] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/data_hldr_reg[150] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/conv_hldr_reg[150] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_148_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(ACIN*(B:0x15))'.
+DSP Report: register ss0/conv_hldr_reg[149] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_147_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(A''*(B:0x14))'.
+DSP Report: register ss0/data_hldr_reg[147] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/data_hldr_reg[148] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/conv_hldr_reg[148] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_146_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(ACIN*(B:0x14))'.
+DSP Report: register ss0/conv_hldr_reg[147] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_145_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(A''*(B:0x13))'.
+DSP Report: register ss0/data_hldr_reg[145] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/data_hldr_reg[146] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/conv_hldr_reg[146] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_144_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(ACIN*(B:0x12))'.
+DSP Report: register ss0/conv_hldr_reg[145] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_143_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(A''*(B:0x11))'.
+DSP Report: register ss0/data_hldr_reg[143] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/data_hldr_reg[144] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/conv_hldr_reg[144] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_142_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(ACIN*(B:0xf))'.
+DSP Report: register ss0/conv_hldr_reg[143] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_141_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(A''*(B:0xd))'.
+DSP Report: register ss0/data_hldr_reg[141] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/data_hldr_reg[142] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/conv_hldr_reg[142] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_140_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(ACIN*(B:0xb))'.
+DSP Report: register ss0/conv_hldr_reg[141] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_139_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/n_sum_30, operation Mode is: PCIN+(A''*(B:0x7))'.
+DSP Report: register ss0/data_hldr_reg[139] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/data_hldr_reg[140] is absorbed into DSP ss0/n_sum_30.
+DSP Report: register ss0/conv_hldr_reg[140] is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/p_138_out is absorbed into DSP ss0/n_sum_30.
+DSP Report: operator ss0/n_sum_30 is absorbed into DSP ss0/n_sum_30.
+DSP Report: Generating DSP ss0/conv_hldr_reg[173], operation Mode is: (A''*(B:0x2))'.
+DSP Report: register ss0/data_hldr_reg[172] is absorbed into DSP ss0/conv_hldr_reg[173].
+DSP Report: register ss0/data_hldr_reg[173] is absorbed into DSP ss0/conv_hldr_reg[173].
+DSP Report: register ss0/conv_hldr_reg[173] is absorbed into DSP ss0/conv_hldr_reg[173].
+DSP Report: operator ss0/p_171_out is absorbed into DSP ss0/conv_hldr_reg[173].
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0x13))'.
+DSP Report: register ss0/data_hldr_reg[152] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[153] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[153] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_151_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0x2))'.
+DSP Report: register ss0/data_hldr_reg[171] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[172] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[172] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_170_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0x3))'.
+DSP Report: register ss0/data_hldr_reg[170] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[171] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[171] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_169_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(ACIN*(B:0x3))'.
+DSP Report: register ss0/conv_hldr_reg[170] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_168_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0x4))'.
+DSP Report: register ss0/data_hldr_reg[168] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[169] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[169] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_167_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(ACIN*(B:0x5))'.
+DSP Report: register ss0/conv_hldr_reg[168] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_166_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0x5))'.
+DSP Report: register ss0/data_hldr_reg[166] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[167] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[167] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_165_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(ACIN*(B:0x6))'.
+DSP Report: register ss0/conv_hldr_reg[166] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_164_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0x7))'.
+DSP Report: register ss0/data_hldr_reg[164] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[165] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[165] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_163_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(ACIN*(B:0x8))'.
+DSP Report: register ss0/conv_hldr_reg[164] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_162_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0x9))'.
+DSP Report: register ss0/data_hldr_reg[162] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[163] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[163] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_161_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(ACIN*(B:0xa))'.
+DSP Report: register ss0/conv_hldr_reg[162] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_160_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0xb))'.
+DSP Report: register ss0/data_hldr_reg[160] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[161] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[161] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_159_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(ACIN*(B:0xc))'.
+DSP Report: register ss0/conv_hldr_reg[160] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_158_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0xd))'.
+DSP Report: register ss0/data_hldr_reg[158] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[159] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[159] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_157_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(ACIN*(B:0xe))'.
+DSP Report: register ss0/conv_hldr_reg[158] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_156_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0xf))'.
+DSP Report: register ss0/data_hldr_reg[156] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[157] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[157] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_155_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(ACIN*(B:0x10))'.
+DSP Report: register ss0/conv_hldr_reg[156] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_154_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(A''*(B:0x11))'.
+DSP Report: register ss0/data_hldr_reg[154] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/data_hldr_reg[155] is absorbed into DSP ss0/n_sum_40.
+DSP Report: register ss0/conv_hldr_reg[155] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_153_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+(ACIN*(B:0x12))'.
+DSP Report: register ss0/conv_hldr_reg[154] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/p_152_out is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/n_sum_40, operation Mode is: PCIN+A:B+(C:0x0)'.
+DSP Report: register ss0/conv_hldr_reg[176] is absorbed into DSP ss0/n_sum_40.
+DSP Report: operator ss0/n_sum_40 is absorbed into DSP ss0/n_sum_40.
+DSP Report: Generating DSP ss0/conv_hldr_reg[37], operation Mode is: (A''*(B:0x4))'.
+DSP Report: register ss0/data_hldr_reg[36] is absorbed into DSP ss0/conv_hldr_reg[37].
+DSP Report: register ss0/data_hldr_reg[37] is absorbed into DSP ss0/conv_hldr_reg[37].
+DSP Report: register ss0/conv_hldr_reg[37] is absorbed into DSP ss0/conv_hldr_reg[37].
+DSP Report: operator ss0/p_37_out is absorbed into DSP ss0/conv_hldr_reg[37].
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(A''*(B:0x14))'.
+DSP Report: register ss0/data_hldr_reg[25] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/data_hldr_reg[26] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/conv_hldr_reg[26] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_26_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(A''*(B:0x7))'.
+DSP Report: register ss0/data_hldr_reg[35] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/data_hldr_reg[36] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/conv_hldr_reg[36] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_36_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(A''*(B:0xb))'.
+DSP Report: register ss0/data_hldr_reg[34] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/data_hldr_reg[35] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/conv_hldr_reg[35] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_35_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(ACIN*(B:0xd))'.
+DSP Report: register ss0/conv_hldr_reg[34] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_34_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(A''*(B:0xf))'.
+DSP Report: register ss0/data_hldr_reg[32] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/data_hldr_reg[33] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/conv_hldr_reg[33] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_33_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(ACIN*(B:0x11))'.
+DSP Report: register ss0/conv_hldr_reg[32] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_32_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(A''*(B:0x12))'.
+DSP Report: register ss0/data_hldr_reg[30] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/data_hldr_reg[31] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/conv_hldr_reg[31] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_31_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(ACIN*(B:0x13))'.
+DSP Report: register ss0/conv_hldr_reg[30] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_30_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(A''*(B:0x14))'.
+DSP Report: register ss0/data_hldr_reg[28] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/data_hldr_reg[29] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/conv_hldr_reg[29] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_29_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(ACIN*(B:0x14))'.
+DSP Report: register ss0/conv_hldr_reg[28] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_28_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/n_sum_50, operation Mode is: PCIN+(A''*(B:0x15))'.
+DSP Report: register ss0/data_hldr_reg[26] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/data_hldr_reg[27] is absorbed into DSP ss0/n_sum_50.
+DSP Report: register ss0/conv_hldr_reg[27] is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/p_27_out is absorbed into DSP ss0/n_sum_50.
+DSP Report: operator ss0/n_sum_50 is absorbed into DSP ss0/n_sum_50.
+DSP Report: Generating DSP ss0/conv_hldr_reg[70], operation Mode is: (A''*(B:0x1d5))'.
+DSP Report: register ss0/data_hldr_reg[69] is absorbed into DSP ss0/conv_hldr_reg[70].
+DSP Report: register ss0/data_hldr_reg[70] is absorbed into DSP ss0/conv_hldr_reg[70].
+DSP Report: register ss0/conv_hldr_reg[70] is absorbed into DSP ss0/conv_hldr_reg[70].
+DSP Report: operator ss0/p_69_out is absorbed into DSP ss0/conv_hldr_reg[70].
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(A''*(B:0xb4))'.
+DSP Report: register ss0/data_hldr_reg[54] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[55] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[55] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_54_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(A''*(B:0x1c2))'.
+DSP Report: register ss0/data_hldr_reg[68] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[69] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[69] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_68_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(A''*(B:0x1ae))'.
+DSP Report: register ss0/data_hldr_reg[67] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[68] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[68] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_67_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(ACIN*(B:0x19a))'.
+DSP Report: register ss0/conv_hldr_reg[67] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_66_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(A''*(B:0x186))'.
+DSP Report: register ss0/data_hldr_reg[65] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[66] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[66] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_65_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(ACIN*(B:0x172))'.
+DSP Report: register ss0/conv_hldr_reg[65] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_64_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(A''*(B:0x15d))'.
+DSP Report: register ss0/data_hldr_reg[63] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[64] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[64] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_63_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(ACIN*(B:0x149))'.
+DSP Report: register ss0/conv_hldr_reg[63] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_62_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(A''*(B:0x135))'.
+DSP Report: register ss0/data_hldr_reg[61] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[62] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[62] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_61_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(ACIN*(B:0x122))'.
+DSP Report: register ss0/conv_hldr_reg[61] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_60_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(A''*(B:0x10e))'.
+DSP Report: register ss0/data_hldr_reg[59] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[60] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[60] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_59_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(ACIN*(B:0xfb))'.
+DSP Report: register ss0/conv_hldr_reg[59] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_58_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(A''*(B:0xe8))'.
+DSP Report: register ss0/data_hldr_reg[57] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[58] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[58] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_57_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(ACIN*(B:0xd6))'.
+DSP Report: register ss0/conv_hldr_reg[57] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_56_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is: PCIN+(A''*(B:0xc5))'.
+DSP Report: register ss0/data_hldr_reg[55] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[56] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[56] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_55_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/conv_hldr_reg[86], operation Mode is: (A''*(B:0x29a))'.
+DSP Report: register ss0/data_hldr_reg[85] is absorbed into DSP ss0/conv_hldr_reg[86].
+DSP Report: register ss0/data_hldr_reg[86] is absorbed into DSP ss0/conv_hldr_reg[86].
+DSP Report: register ss0/conv_hldr_reg[86] is absorbed into DSP ss0/conv_hldr_reg[86].
+DSP Report: operator ss0/p_85_out is absorbed into DSP ss0/conv_hldr_reg[86].
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(A''*(B:0x1e8))'.
+DSP Report: register ss0/data_hldr_reg[70] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[71] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[71] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_70_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(A''*(B:0x297))'.
+DSP Report: register ss0/data_hldr_reg[84] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[85] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[85] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_84_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(A''*(B:0x292))'.
+DSP Report: register ss0/data_hldr_reg[83] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[84] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[84] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_83_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(ACIN*(B:0x28c))'.
+DSP Report: register ss0/conv_hldr_reg[83] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_82_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(A''*(B:0x284))'.
+DSP Report: register ss0/data_hldr_reg[81] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[82] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[82] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_81_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(ACIN*(B:0x27b))'.
+DSP Report: register ss0/conv_hldr_reg[81] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_80_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(A''*(B:0x271))'.
+DSP Report: register ss0/data_hldr_reg[79] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[80] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[80] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_79_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(ACIN*(B:0x266))'.
+DSP Report: register ss0/conv_hldr_reg[79] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_78_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(A''*(B:0x259))'.
+DSP Report: register ss0/data_hldr_reg[77] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[78] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[78] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_77_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(ACIN*(B:0x24c))'.
+DSP Report: register ss0/conv_hldr_reg[77] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_76_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(A''*(B:0x23d))'.
+DSP Report: register ss0/data_hldr_reg[75] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[76] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[76] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_75_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(ACIN*(B:0x22e))'.
+DSP Report: register ss0/conv_hldr_reg[75] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_74_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(A''*(B:0x21d))'.
+DSP Report: register ss0/data_hldr_reg[73] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[74] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[74] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_73_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(ACIN*(B:0x20c))'.
+DSP Report: register ss0/conv_hldr_reg[73] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_72_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is: PCIN+(A''*(B:0x1fa))'.
+DSP Report: register ss0/data_hldr_reg[71] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[72] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[72] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_71_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/conv_hldr_reg[102], operation Mode is: (A''*(B:0x21d))'.
+DSP Report: register ss0/data_hldr_reg[101] is absorbed into DSP ss0/conv_hldr_reg[102].
+DSP Report: register ss0/data_hldr_reg[102] is absorbed into DSP ss0/conv_hldr_reg[102].
+DSP Report: register ss0/conv_hldr_reg[102] is absorbed into DSP ss0/conv_hldr_reg[102].
+DSP Report: operator ss0/p_101_out is absorbed into DSP ss0/conv_hldr_reg[102].
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(A''*(B:0x29d))'.
+DSP Report: register ss0/data_hldr_reg[86] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[87] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[87] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_86_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(A''*(B:0x22e))'.
+DSP Report: register ss0/data_hldr_reg[100] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[101] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[101] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_100_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(A''*(B:0x23d))'.
+DSP Report: register ss0/data_hldr_reg[99] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[100] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[100] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_99_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(ACIN*(B:0x24c))'.
+DSP Report: register ss0/conv_hldr_reg[99] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_98_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(A''*(B:0x259))'.
+DSP Report: register ss0/data_hldr_reg[97] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[98] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[98] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_97_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(ACIN*(B:0x266))'.
+DSP Report: register ss0/conv_hldr_reg[97] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_96_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(A''*(B:0x271))'.
+DSP Report: register ss0/data_hldr_reg[95] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[96] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[96] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_95_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(ACIN*(B:0x27b))'.
+DSP Report: register ss0/conv_hldr_reg[95] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_94_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(A''*(B:0x284))'.
+DSP Report: register ss0/data_hldr_reg[93] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[94] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[94] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_93_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(ACIN*(B:0x28c))'.
+DSP Report: register ss0/conv_hldr_reg[93] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_92_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(A''*(B:0x292))'.
+DSP Report: register ss0/data_hldr_reg[91] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[92] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[92] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_91_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(ACIN*(B:0x297))'.
+DSP Report: register ss0/conv_hldr_reg[91] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_90_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(A''*(B:0x29a))'.
+DSP Report: register ss0/data_hldr_reg[89] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[90] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[90] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_89_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(ACIN*(B:0x29d))'.
+DSP Report: register ss0/conv_hldr_reg[89] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_88_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is: PCIN+(A''*(B:0x29d))'.
+DSP Report: register ss0/data_hldr_reg[87] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[88] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[88] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_87_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/conv_hldr_reg[118], operation Mode is: (A''*(B:0xe8))'.
+DSP Report: register ss0/data_hldr_reg[117] is absorbed into DSP ss0/conv_hldr_reg[118].
+DSP Report: register ss0/data_hldr_reg[118] is absorbed into DSP ss0/conv_hldr_reg[118].
+DSP Report: register ss0/conv_hldr_reg[118] is absorbed into DSP ss0/conv_hldr_reg[118].
+DSP Report: operator ss0/p_117_out is absorbed into DSP ss0/conv_hldr_reg[118].
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(A''*(B:0x20c))'.
+DSP Report: register ss0/data_hldr_reg[102] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[103] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[103] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_102_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(A''*(B:0xfb))'.
+DSP Report: register ss0/data_hldr_reg[116] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[117] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[117] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_116_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(A''*(B:0x10e))'.
+DSP Report: register ss0/data_hldr_reg[115] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[116] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[116] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_115_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(ACIN*(B:0x122))'.
+DSP Report: register ss0/conv_hldr_reg[115] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_114_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(A''*(B:0x135))'.
+DSP Report: register ss0/data_hldr_reg[113] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[114] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[114] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_113_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(ACIN*(B:0x149))'.
+DSP Report: register ss0/conv_hldr_reg[113] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_112_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(A''*(B:0x15d))'.
+DSP Report: register ss0/data_hldr_reg[111] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[112] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[112] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_111_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(ACIN*(B:0x172))'.
+DSP Report: register ss0/conv_hldr_reg[111] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_110_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(A''*(B:0x186))'.
+DSP Report: register ss0/data_hldr_reg[109] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[110] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[110] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_109_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(ACIN*(B:0x19a))'.
+DSP Report: register ss0/conv_hldr_reg[109] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_108_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(A''*(B:0x1ae))'.
+DSP Report: register ss0/data_hldr_reg[107] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[108] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[108] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_107_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(ACIN*(B:0x1c2))'.
+DSP Report: register ss0/conv_hldr_reg[107] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_106_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(A''*(B:0x1d5))'.
+DSP Report: register ss0/data_hldr_reg[105] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[106] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[106] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_105_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(ACIN*(B:0x1e8))'.
+DSP Report: register ss0/conv_hldr_reg[105] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_104_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is: PCIN+(A''*(B:0x1fa))'.
+DSP Report: register ss0/data_hldr_reg[103] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[104] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[104] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_103_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/conv_hldr_reg[137], operation Mode is: (A''*(B:0x4))'.
+DSP Report: register ss0/data_hldr_reg[136] is absorbed into DSP ss0/conv_hldr_reg[137].
+DSP Report: register ss0/data_hldr_reg[137] is absorbed into DSP ss0/conv_hldr_reg[137].
+DSP Report: register ss0/conv_hldr_reg[137] is absorbed into DSP ss0/conv_hldr_reg[137].
+DSP Report: operator ss0/p_136_out is absorbed into DSP ss0/conv_hldr_reg[137].
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(A''*(B:0xd6))'.
+DSP Report: register ss0/data_hldr_reg[118] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[119] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[119] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_118_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(A''*(B:0xa))'.
+DSP Report: register ss0/data_hldr_reg[135] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[136] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[136] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_135_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(A''*(B:0x10))'.
+DSP Report: register ss0/data_hldr_reg[134] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[135] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[135] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_134_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(ACIN*(B:0x17))'.
+DSP Report: register ss0/conv_hldr_reg[134] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_133_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(A''*(B:0x1e))'.
+DSP Report: register ss0/data_hldr_reg[132] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[133] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[133] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_132_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(ACIN*(B:0x27))'.
+DSP Report: register ss0/conv_hldr_reg[132] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_131_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(A''*(B:0x30))'.
+DSP Report: register ss0/data_hldr_reg[130] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[131] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[131] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_130_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(ACIN*(B:0x39))'.
+DSP Report: register ss0/conv_hldr_reg[130] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_129_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(A''*(B:0x44))'.
+DSP Report: register ss0/data_hldr_reg[128] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[129] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[129] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_128_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(ACIN*(B:0x4f))'.
+DSP Report: register ss0/conv_hldr_reg[128] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_127_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(A''*(B:0x5b))'.
+DSP Report: register ss0/data_hldr_reg[126] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[127] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[127] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_126_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(ACIN*(B:0x68))'.
+DSP Report: register ss0/conv_hldr_reg[126] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_125_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(A''*(B:0x76))'.
+DSP Report: register ss0/data_hldr_reg[124] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[125] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[125] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_124_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(ACIN*(B:0x84))'.
+DSP Report: register ss0/conv_hldr_reg[124] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_123_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(A''*(B:0x93))'.
+DSP Report: register ss0/data_hldr_reg[122] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[123] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[123] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_122_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(ACIN*(B:0xa3))'.
+DSP Report: register ss0/conv_hldr_reg[122] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_121_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(A''*(B:0xb4))'.
+DSP Report: register ss0/data_hldr_reg[120] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[121] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[121] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_120_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is: PCIN+(ACIN*(B:0xc5))'.
+DSP Report: register ss0/conv_hldr_reg[120] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_119_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/conv_hldr_reg[12], operation Mode is: (A''*(B:0x8))'.
+DSP Report: register ss0/data_hldr_reg[11] is absorbed into DSP ss0/conv_hldr_reg[12].
+DSP Report: register ss0/data_hldr_reg[12] is absorbed into DSP ss0/conv_hldr_reg[12].
+DSP Report: register ss0/conv_hldr_reg[12] is absorbed into DSP ss0/conv_hldr_reg[12].
+DSP Report: operator ss0/p_12_out is absorbed into DSP ss0/conv_hldr_reg[12].
+DSP Report: Generating DSP ss0/n_sum_10, operation Mode is: PCIN+(A''*(B:0x9))'.
+DSP Report: register ss0/data_hldr_reg[12] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/data_hldr_reg[13] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/conv_hldr_reg[13] is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/p_13_out is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/n_sum_10 is absorbed into DSP ss0/n_sum_10.
+DSP Report: Generating DSP ss0/n_sum_10, operation Mode is: PCIN+(A''*(B:0x7))'.
+DSP Report: register ss0/data_hldr_reg[10] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/data_hldr_reg[11] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/conv_hldr_reg[11] is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/p_11_out is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/n_sum_10 is absorbed into DSP ss0/n_sum_10.
+DSP Report: Generating DSP ss0/n_sum_10, operation Mode is: PCIN+(A''*(B:0x6))'.
+DSP Report: register ss0/data_hldr_reg[9] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/data_hldr_reg[10] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/conv_hldr_reg[10] is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/p_10_out is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/n_sum_10 is absorbed into DSP ss0/n_sum_10.
+DSP Report: Generating DSP ss0/n_sum_10, operation Mode is: PCIN+(A''*(B:0x5))'.
+DSP Report: register ss0/data_hldr_reg[8] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/data_hldr_reg[9] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/conv_hldr_reg[9] is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/p_9_out is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/n_sum_10 is absorbed into DSP ss0/n_sum_10.
+DSP Report: Generating DSP ss0/n_sum_10, operation Mode is: PCIN+(A''*(B:0x5))'.
+DSP Report: register ss0/data_hldr_reg[7] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/data_hldr_reg[8] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/conv_hldr_reg[8] is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/p_8_out is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/n_sum_10 is absorbed into DSP ss0/n_sum_10.
+DSP Report: Generating DSP ss0/n_sum_10, operation Mode is: PCIN+(A''*(B:0x4))'.
+DSP Report: register ss0/data_hldr_reg[6] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/data_hldr_reg[7] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/conv_hldr_reg[7] is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/p_7_out is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/n_sum_10 is absorbed into DSP ss0/n_sum_10.
+DSP Report: Generating DSP ss0/n_sum_10, operation Mode is: PCIN+(A''*(B:0x3))'.
+DSP Report: register ss0/data_hldr_reg[5] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/data_hldr_reg[6] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/conv_hldr_reg[6] is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/p_6_out is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/n_sum_10 is absorbed into DSP ss0/n_sum_10.
+DSP Report: Generating DSP ss0/n_sum_10, operation Mode is: PCIN+(A''*(B:0x3))'.
+DSP Report: register ss0/data_hldr_reg[4] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/data_hldr_reg[5] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/conv_hldr_reg[5] is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/p_5_out is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/n_sum_10 is absorbed into DSP ss0/n_sum_10.
+DSP Report: Generating DSP ss0/n_sum_10, operation Mode is: PCIN+(A''*(B:0x2))'.
+DSP Report: register ss0/data_hldr_reg[3] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/data_hldr_reg[4] is absorbed into DSP ss0/n_sum_10.
+DSP Report: register ss0/conv_hldr_reg[4] is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/p_4_out is absorbed into DSP ss0/n_sum_10.
+DSP Report: operator ss0/n_sum_10 is absorbed into DSP ss0/n_sum_10.
+DSP Report: Generating DSP ss0/conv_hldr_reg[54], operation Mode is: (A''*(B:0xa3))'.
+DSP Report: register ss0/data_hldr_reg[53] is absorbed into DSP ss0/conv_hldr_reg[54].
+DSP Report: register ss0/data_hldr_reg[54] is absorbed into DSP ss0/conv_hldr_reg[54].
+DSP Report: register ss0/conv_hldr_reg[54] is absorbed into DSP ss0/conv_hldr_reg[54].
+DSP Report: operator ss0/p_53_out is absorbed into DSP ss0/conv_hldr_reg[54].
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(A''*(B:0x4))'.
+DSP Report: register ss0/data_hldr_reg[38] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[39] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[39] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_38_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(A''*(B:0x93))'.
+DSP Report: register ss0/data_hldr_reg[52] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[53] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[53] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_52_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(A''*(B:0x84))'.
+DSP Report: register ss0/data_hldr_reg[51] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[52] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[52] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_51_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(ACIN*(B:0x76))'.
+DSP Report: register ss0/conv_hldr_reg[51] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_50_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(A''*(B:0x68))'.
+DSP Report: register ss0/data_hldr_reg[49] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[50] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[50] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_49_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(ACIN*(B:0x5b))'.
+DSP Report: register ss0/conv_hldr_reg[49] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_48_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(A''*(B:0x4f))'.
+DSP Report: register ss0/data_hldr_reg[47] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[48] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[48] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_47_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(ACIN*(B:0x44))'.
+DSP Report: register ss0/conv_hldr_reg[47] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_46_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(A''*(B:0x39))'.
+DSP Report: register ss0/data_hldr_reg[45] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[46] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[46] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_45_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(ACIN*(B:0x30))'.
+DSP Report: register ss0/conv_hldr_reg[45] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_44_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(A''*(B:0x27))'.
+DSP Report: register ss0/data_hldr_reg[43] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[44] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[44] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_43_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(ACIN*(B:0x1e))'.
+DSP Report: register ss0/conv_hldr_reg[43] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_42_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(A''*(B:0x17))'.
+DSP Report: register ss0/data_hldr_reg[41] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[42] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[42] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_41_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(ACIN*(B:0x10))'.
+DSP Report: register ss0/conv_hldr_reg[41] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_40_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is: PCIN+(A''*(B:0xa))'.
+DSP Report: register ss0/data_hldr_reg[39] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[40] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[40] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_39_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 1435.043 ; gain = 595.734
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 169, Available = 90. Use report_utilization command for details.
+DSP Report: Generating DSP ss0/conv_hldr_reg[70], operation Mode is (post resource management): (A''*(B:0x1d5))'.
+DSP Report: register ss0/data_hldr_reg[69] is absorbed into DSP ss0/conv_hldr_reg[70].
+DSP Report: register ss0/data_hldr_reg[70] is absorbed into DSP ss0/conv_hldr_reg[70].
+DSP Report: register ss0/conv_hldr_reg[70] is absorbed into DSP ss0/conv_hldr_reg[70].
+DSP Report: operator ss0/p_69_out is absorbed into DSP ss0/conv_hldr_reg[70].
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A''*(B:0xb4))'.
+DSP Report: register ss0/data_hldr_reg[54] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[55] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[55] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_54_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A''*(B:0x1c2))'.
+DSP Report: register ss0/data_hldr_reg[68] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[69] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[69] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_68_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A''*(B:0x1ae))'.
+DSP Report: register ss0/data_hldr_reg[67] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[68] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[68] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_67_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A2*(B:0x19a))'.
+DSP Report: register ss0/data_hldr_reg[67] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[67] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_66_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A''*(B:0x186))'.
+DSP Report: register ss0/data_hldr_reg[65] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[66] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[66] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_65_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A2*(B:0x172))'.
+DSP Report: register ss0/data_hldr_reg[65] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[65] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_64_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A''*(B:0x15d))'.
+DSP Report: register ss0/data_hldr_reg[63] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[64] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[64] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_63_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A2*(B:0x149))'.
+DSP Report: register ss0/data_hldr_reg[63] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[63] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_62_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A''*(B:0x135))'.
+DSP Report: register ss0/data_hldr_reg[61] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[62] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[62] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_61_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A2*(B:0x122))'.
+DSP Report: register ss0/data_hldr_reg[61] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[61] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_60_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A''*(B:0x10e))'.
+DSP Report: register ss0/data_hldr_reg[59] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[60] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[60] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_59_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A2*(B:0xfb))'.
+DSP Report: register ss0/data_hldr_reg[59] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[59] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_58_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A''*(B:0xe8))'.
+DSP Report: register ss0/data_hldr_reg[57] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[58] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[58] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_57_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A2*(B:0xd6))'.
+DSP Report: register ss0/data_hldr_reg[57] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[57] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_56_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/p_sum_20, operation Mode is (post resource management): PCIN+(A''*(B:0xc5))'.
+DSP Report: register ss0/data_hldr_reg[55] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/data_hldr_reg[56] is absorbed into DSP ss0/p_sum_20.
+DSP Report: register ss0/conv_hldr_reg[56] is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_sum_20 is absorbed into DSP ss0/p_sum_20.
+DSP Report: operator ss0/p_55_out is absorbed into DSP ss0/p_sum_20.
+DSP Report: Generating DSP ss0/conv_hldr_reg[86], operation Mode is (post resource management): (A''*(B:0x29a))'.
+DSP Report: register ss0/data_hldr_reg[85] is absorbed into DSP ss0/conv_hldr_reg[86].
+DSP Report: register ss0/data_hldr_reg[86] is absorbed into DSP ss0/conv_hldr_reg[86].
+DSP Report: register ss0/conv_hldr_reg[86] is absorbed into DSP ss0/conv_hldr_reg[86].
+DSP Report: operator ss0/p_85_out is absorbed into DSP ss0/conv_hldr_reg[86].
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A''*(B:0x1e8))'.
+DSP Report: register ss0/data_hldr_reg[70] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[71] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[71] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_70_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A''*(B:0x297))'.
+DSP Report: register ss0/data_hldr_reg[84] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[85] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[85] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_84_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A''*(B:0x292))'.
+DSP Report: register ss0/data_hldr_reg[83] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[84] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[84] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_83_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A2*(B:0x28c))'.
+DSP Report: register ss0/data_hldr_reg[83] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[83] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_82_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A''*(B:0x284))'.
+DSP Report: register ss0/data_hldr_reg[81] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[82] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[82] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_81_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A2*(B:0x27b))'.
+DSP Report: register ss0/data_hldr_reg[81] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[81] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_80_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A''*(B:0x271))'.
+DSP Report: register ss0/data_hldr_reg[79] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[80] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[80] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_79_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A2*(B:0x266))'.
+DSP Report: register ss0/data_hldr_reg[79] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[79] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_78_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A''*(B:0x259))'.
+DSP Report: register ss0/data_hldr_reg[77] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[78] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[78] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_77_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A2*(B:0x24c))'.
+DSP Report: register ss0/data_hldr_reg[77] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[77] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_76_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A''*(B:0x23d))'.
+DSP Report: register ss0/data_hldr_reg[75] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[76] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[76] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_75_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A2*(B:0x22e))'.
+DSP Report: register ss0/data_hldr_reg[75] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[75] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_74_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A''*(B:0x21d))'.
+DSP Report: register ss0/data_hldr_reg[73] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[74] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[74] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_73_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A2*(B:0x20c))'.
+DSP Report: register ss0/data_hldr_reg[73] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[73] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_72_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/p_sum_30, operation Mode is (post resource management): PCIN+(A''*(B:0x1fa))'.
+DSP Report: register ss0/data_hldr_reg[71] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/data_hldr_reg[72] is absorbed into DSP ss0/p_sum_30.
+DSP Report: register ss0/conv_hldr_reg[72] is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_sum_30 is absorbed into DSP ss0/p_sum_30.
+DSP Report: operator ss0/p_71_out is absorbed into DSP ss0/p_sum_30.
+DSP Report: Generating DSP ss0/conv_hldr_reg[102], operation Mode is (post resource management): (A''*(B:0x21d))'.
+DSP Report: register ss0/data_hldr_reg[101] is absorbed into DSP ss0/conv_hldr_reg[102].
+DSP Report: register ss0/data_hldr_reg[102] is absorbed into DSP ss0/conv_hldr_reg[102].
+DSP Report: register ss0/conv_hldr_reg[102] is absorbed into DSP ss0/conv_hldr_reg[102].
+DSP Report: operator ss0/p_101_out is absorbed into DSP ss0/conv_hldr_reg[102].
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A''*(B:0x29d))'.
+DSP Report: register ss0/data_hldr_reg[86] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[87] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[87] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_86_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A''*(B:0x22e))'.
+DSP Report: register ss0/data_hldr_reg[100] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[101] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[101] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_100_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A''*(B:0x23d))'.
+DSP Report: register ss0/data_hldr_reg[99] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[100] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[100] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_99_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A2*(B:0x24c))'.
+DSP Report: register ss0/data_hldr_reg[99] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[99] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_98_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A''*(B:0x259))'.
+DSP Report: register ss0/data_hldr_reg[97] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[98] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[98] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_97_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A2*(B:0x266))'.
+DSP Report: register ss0/data_hldr_reg[97] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[97] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_96_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A''*(B:0x271))'.
+DSP Report: register ss0/data_hldr_reg[95] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[96] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[96] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_95_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A2*(B:0x27b))'.
+DSP Report: register ss0/data_hldr_reg[95] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[95] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_94_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A''*(B:0x284))'.
+DSP Report: register ss0/data_hldr_reg[93] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[94] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[94] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_93_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A2*(B:0x28c))'.
+DSP Report: register ss0/data_hldr_reg[93] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[93] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_92_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A''*(B:0x292))'.
+DSP Report: register ss0/data_hldr_reg[91] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[92] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[92] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_91_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A2*(B:0x297))'.
+DSP Report: register ss0/data_hldr_reg[91] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[91] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_90_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A''*(B:0x29a))'.
+DSP Report: register ss0/data_hldr_reg[89] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[90] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[90] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_89_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A2*(B:0x29d))'.
+DSP Report: register ss0/data_hldr_reg[89] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[89] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_88_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/p_sum_40, operation Mode is (post resource management): PCIN+(A''*(B:0x29d))'.
+DSP Report: register ss0/data_hldr_reg[87] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/data_hldr_reg[88] is absorbed into DSP ss0/p_sum_40.
+DSP Report: register ss0/conv_hldr_reg[88] is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_sum_40 is absorbed into DSP ss0/p_sum_40.
+DSP Report: operator ss0/p_87_out is absorbed into DSP ss0/p_sum_40.
+DSP Report: Generating DSP ss0/conv_hldr_reg[118], operation Mode is (post resource management): (A''*(B:0xe8))'.
+DSP Report: register ss0/data_hldr_reg[117] is absorbed into DSP ss0/conv_hldr_reg[118].
+DSP Report: register ss0/data_hldr_reg[118] is absorbed into DSP ss0/conv_hldr_reg[118].
+DSP Report: register ss0/conv_hldr_reg[118] is absorbed into DSP ss0/conv_hldr_reg[118].
+DSP Report: operator ss0/p_117_out is absorbed into DSP ss0/conv_hldr_reg[118].
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A''*(B:0x20c))'.
+DSP Report: register ss0/data_hldr_reg[102] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[103] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[103] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_102_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A''*(B:0xfb))'.
+DSP Report: register ss0/data_hldr_reg[116] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[117] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[117] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_116_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A''*(B:0x10e))'.
+DSP Report: register ss0/data_hldr_reg[115] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[116] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[116] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_115_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A2*(B:0x122))'.
+DSP Report: register ss0/data_hldr_reg[115] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[115] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_114_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A''*(B:0x135))'.
+DSP Report: register ss0/data_hldr_reg[113] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[114] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[114] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_113_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A2*(B:0x149))'.
+DSP Report: register ss0/data_hldr_reg[113] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[113] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_112_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A''*(B:0x15d))'.
+DSP Report: register ss0/data_hldr_reg[111] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[112] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[112] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_111_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A2*(B:0x172))'.
+DSP Report: register ss0/data_hldr_reg[111] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[111] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_110_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A''*(B:0x186))'.
+DSP Report: register ss0/data_hldr_reg[109] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[110] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[110] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_109_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A2*(B:0x19a))'.
+DSP Report: register ss0/data_hldr_reg[109] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[109] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_108_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A''*(B:0x1ae))'.
+DSP Report: register ss0/data_hldr_reg[107] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[108] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[108] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_107_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A2*(B:0x1c2))'.
+DSP Report: register ss0/data_hldr_reg[107] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[107] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_106_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A''*(B:0x1d5))'.
+DSP Report: register ss0/data_hldr_reg[105] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[106] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[106] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_105_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A2*(B:0x1e8))'.
+DSP Report: register ss0/data_hldr_reg[105] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[105] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_104_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_50, operation Mode is (post resource management): PCIN+(A''*(B:0x1fa))'.
+DSP Report: register ss0/data_hldr_reg[103] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/data_hldr_reg[104] is absorbed into DSP ss0/p_sum_50.
+DSP Report: register ss0/conv_hldr_reg[104] is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_sum_50 is absorbed into DSP ss0/p_sum_50.
+DSP Report: operator ss0/p_103_out is absorbed into DSP ss0/p_sum_50.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): C'+(A''*(B:0xd6))'.
+DSP Report: register ss0/data_hldr_reg[118] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[119] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[137] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[119] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_118_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A''*(B:0xa))'.
+DSP Report: register ss0/data_hldr_reg[135] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[136] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[136] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_135_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): C+(A2*(B:0x17))'.
+DSP Report: register ss0/data_hldr_reg[134] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[134] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_133_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A''*(B:0x1e))'.
+DSP Report: register ss0/data_hldr_reg[132] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[133] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[133] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_132_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A2*(B:0x27))'.
+DSP Report: register ss0/data_hldr_reg[132] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[132] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_131_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A''*(B:0x30))'.
+DSP Report: register ss0/data_hldr_reg[130] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[131] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[131] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_130_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A2*(B:0x39))'.
+DSP Report: register ss0/data_hldr_reg[130] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[130] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_129_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A''*(B:0x44))'.
+DSP Report: register ss0/data_hldr_reg[128] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[129] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[129] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_128_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A2*(B:0x4f))'.
+DSP Report: register ss0/data_hldr_reg[128] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[128] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_127_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A''*(B:0x5b))'.
+DSP Report: register ss0/data_hldr_reg[126] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[127] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[127] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_126_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A2*(B:0x68))'.
+DSP Report: register ss0/data_hldr_reg[126] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[126] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_125_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A''*(B:0x76))'.
+DSP Report: register ss0/data_hldr_reg[124] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[125] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[125] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_124_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A2*(B:0x84))'.
+DSP Report: register ss0/data_hldr_reg[124] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[124] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_123_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A''*(B:0x93))'.
+DSP Report: register ss0/data_hldr_reg[122] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[123] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[123] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_122_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A2*(B:0xa3))'.
+DSP Report: register ss0/data_hldr_reg[122] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[122] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_121_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A''*(B:0xb4))'.
+DSP Report: register ss0/data_hldr_reg[120] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/data_hldr_reg[121] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[121] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_120_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_60, operation Mode is (post resource management): PCIN+(A2*(B:0xc5))'.
+DSP Report: register ss0/data_hldr_reg[120] is absorbed into DSP ss0/p_sum_60.
+DSP Report: register ss0/conv_hldr_reg[120] is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_sum_60 is absorbed into DSP ss0/p_sum_60.
+DSP Report: operator ss0/p_119_out is absorbed into DSP ss0/p_sum_60.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is (post resource management): C'+(A''*(B:0xa3))'.
+DSP Report: register ss0/data_hldr_reg[53] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[54] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[39] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[54] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_53_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is (post resource management): PCIN+(A''*(B:0x93))'.
+DSP Report: register ss0/data_hldr_reg[52] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[53] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[53] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_52_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is (post resource management): PCIN+(A''*(B:0x84))'.
+DSP Report: register ss0/data_hldr_reg[51] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[52] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[52] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_51_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is (post resource management): PCIN+(A2*(B:0x76))'.
+DSP Report: register ss0/data_hldr_reg[51] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[51] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_50_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is (post resource management): PCIN+(A''*(B:0x68))'.
+DSP Report: register ss0/data_hldr_reg[49] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/data_hldr_reg[50] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[50] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_49_out is absorbed into DSP ss0/p_sum_10.
+DSP Report: Generating DSP ss0/p_sum_10, operation Mode is (post resource management): PCIN+(A2*(B:0x5b))'.
+DSP Report: register ss0/data_hldr_reg[49] is absorbed into DSP ss0/p_sum_10.
+DSP Report: register ss0/conv_hldr_reg[49] is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_sum_10 is absorbed into DSP ss0/p_sum_10.
+DSP Report: operator ss0/p_48_out is absorbed into DSP ss0/p_sum_10.
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++--------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|top           | (A''*(B:0x14))'        | 16     | 5      | -      | -      | 21     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xa))'    | 16     | 4      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x14))'   | 16     | 5      | -      | -      | 23     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x13))'   | 16     | 5      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x12))'  | 16     | 5      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x11))'   | 16     | 5      | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x10))'  | 16     | 5      | -      | -      | 27     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xf))'    | 16     | 4      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xe))'   | 16     | 4      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xd))'    | 16     | 4      | -      | -      | 30     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xc))'   | 16     | 4      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xb))'    | 16     | 4      | -      | -      | 32     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | (A''*(B:0x14))'        | 16     | 5      | -      | -      | 21     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x4))'    | 16     | 3      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x14))'   | 16     | 5      | -      | -      | 23     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x14))'   | 16     | 5      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x15))'  | 16     | 5      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x14))'   | 16     | 5      | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x14))'  | 16     | 5      | -      | -      | 27     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x13))'   | 16     | 5      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x12))'  | 16     | 5      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x11))'   | 16     | 5      | -      | -      | 30     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xf))'   | 16     | 4      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xd))'    | 16     | 4      | -      | -      | 32     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xb))'   | 16     | 4      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x7))'    | 16     | 3      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | (A''*(B:0x2))'         | 16     | 2      | -      | -      | 18     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x13))'   | 16     | 5      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x2))'    | 16     | 2      | -      | -      | 23     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x3))'    | 16     | 2      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x3))'   | 16     | 2      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x4))'    | 16     | 3      | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x5))'   | 16     | 3      | -      | -      | 27     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x5))'    | 16     | 3      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x6))'   | 16     | 3      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x7))'    | 16     | 3      | -      | -      | 30     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x8))'   | 16     | 4      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x9))'    | 16     | 4      | -      | -      | 32     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xa))'   | 16     | 4      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xb))'    | 16     | 4      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xc))'   | 16     | 4      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xd))'    | 16     | 4      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xe))'   | 16     | 4      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xf))'    | 16     | 4      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x10))'  | 16     | 5      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(A''*(B:0x11))'   | 16     | 5      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x12))'  | 16     | 5      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+A:B+(C:0x0)'      | 14     | 18     | 32     | -      | -1     | 0    | 0    | 1    | -    | -     | 0    | 0    | 
+|top           | (A''*(B:0x4))'         | 16     | 3      | -      | -      | 19     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x14))'   | 16     | 5      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x7))'    | 16     | 3      | -      | -      | 23     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xb))'    | 16     | 4      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xd))'   | 16     | 4      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xf))'    | 16     | 4      | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x11))'  | 16     | 5      | -      | -      | 27     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x12))'   | 16     | 5      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x13))'  | 16     | 5      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x14))'   | 16     | 5      | -      | -      | 30     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x14))'  | 16     | 5      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x15))'   | 16     | 5      | -      | -      | 32     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | (A''*(B:0x1d5))'       | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xb4))'   | 16     | 8      | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x1c2))'  | 16     | 9      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x1ae))'  | 16     | 9      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x19a))' | 16     | 9      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x186))'  | 16     | 9      | -      | -      | 30     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x172))' | 16     | 9      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x15d))'  | 16     | 9      | -      | -      | 32     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x149))' | 16     | 9      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x135))'  | 16     | 9      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x122))' | 16     | 9      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x10e))'  | 16     | 9      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xfb))'  | 16     | 8      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xe8))'   | 16     | 8      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xd6))'  | 16     | 8      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xc5))'   | 16     | 8      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | (A''*(B:0x29a))'       | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x1e8))'  | 16     | 9      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x297))'  | 16     | 10     | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x292))'  | 16     | 10     | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x28c))' | 16     | 10     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x284))'  | 16     | 10     | -      | -      | 31     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x27b))' | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x271))'  | 16     | 10     | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x266))' | 16     | 10     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x259))'  | 16     | 10     | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x24c))' | 16     | 10     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x23d))'  | 16     | 10     | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x22e))' | 16     | 10     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x21d))'  | 16     | 10     | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x20c))' | 16     | 10     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x1fa))'  | 16     | 9      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | (A''*(B:0x21d))'       | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x29d))'  | 16     | 10     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x22e))'  | 16     | 10     | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x23d))'  | 16     | 10     | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x24c))' | 16     | 10     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x259))'  | 16     | 10     | -      | -      | 31     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x266))' | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x271))'  | 16     | 10     | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x27b))' | 16     | 10     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x284))'  | 16     | 10     | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x28c))' | 16     | 10     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x292))'  | 16     | 10     | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x297))' | 16     | 10     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x29a))'  | 16     | 10     | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x29d))' | 16     | 10     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x29d))'  | 16     | 10     | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | (A''*(B:0xe8))'        | 16     | 8      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x20c))'  | 16     | 10     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xfb))'   | 16     | 8      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x10e))'  | 16     | 9      | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x122))' | 16     | 9      | -      | -      | 30     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x135))'  | 16     | 9      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x149))' | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x15d))'  | 16     | 9      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x172))' | 16     | 9      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x186))'  | 16     | 9      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x19a))' | 16     | 9      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x1ae))'  | 16     | 9      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x1c2))' | 16     | 9      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x1d5))'  | 16     | 9      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x1e8))' | 16     | 9      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x1fa))'  | 16     | 9      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | (A''*(B:0x4))'         | 16     | 3      | -      | -      | 19     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xd6))'   | 16     | 8      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xa))'    | 16     | 4      | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x10))'   | 16     | 5      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x17))'  | 16     | 5      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x1e))'   | 16     | 5      | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x27))'  | 16     | 6      | -      | -      | 30     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x30))'   | 16     | 6      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x39))'  | 16     | 6      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x44))'   | 16     | 7      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x4f))'  | 16     | 7      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x5b))'   | 16     | 7      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x68))'  | 16     | 7      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x76))'   | 16     | 7      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x84))'  | 16     | 8      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x93))'   | 16     | 8      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xa3))'  | 16     | 8      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xb4))'   | 16     | 8      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0xc5))'  | 16     | 8      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | (A''*(B:0x8))'         | 16     | 4      | -      | -      | 20     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x9))'    | 16     | 4      | -      | -      | 21     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x7))'    | 16     | 3      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x6))'    | 16     | 3      | -      | -      | 23     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x5))'    | 16     | 3      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x5))'    | 16     | 3      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x4))'    | 16     | 3      | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x3))'    | 16     | 2      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(A''*(B:0x3))'    | 16     | 2      | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x2))'    | 16     | 2      | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | (A''*(B:0xa3))'        | 16     | 8      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x4))'    | 16     | 3      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x93))'   | 16     | 8      | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x84))'   | 16     | 8      | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x76))'  | 16     | 7      | -      | -      | 28     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x68))'   | 16     | 7      | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x5b))'  | 16     | 7      | -      | -      | 30     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x4f))'   | 16     | 7      | -      | -      | 31     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x44))'  | 16     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x39))'   | 16     | 6      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x30))'  | 16     | 6      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x27))'   | 16     | 6      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x1e))'  | 16     | 5      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0x17))'   | 16     | 5      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|sinc_smoother | PCIN+(ACIN*(B:0x10))'  | 16     | 5      | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|top           | PCIN+(A''*(B:0xa))'    | 16     | 4      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
++--------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:46 ; elapsed = 00:01:48 . Memory (MB): peak = 1435.043 ; gain = 595.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:56 ; elapsed = 00:01:58 . Memory (MB): peak = 1452.301 ; gain = 612.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:09 ; elapsed = 00:02:11 . Memory (MB): peak = 1480.918 ; gain = 641.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:22 ; elapsed = 00:02:25 . Memory (MB): peak = 1483.719 ; gain = 644.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:23 ; elapsed = 00:02:25 . Memory (MB): peak = 1483.719 ; gain = 644.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:30 ; elapsed = 00:02:32 . Memory (MB): peak = 1483.719 ; gain = 644.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:30 ; elapsed = 00:02:32 . Memory (MB): peak = 1483.719 ; gain = 644.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:30 ; elapsed = 00:02:33 . Memory (MB): peak = 1483.719 ; gain = 644.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:30 ; elapsed = 00:02:33 . Memory (MB): peak = 1483.719 ; gain = 644.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|top         | (A''*B)'      | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | (A''*B)'      | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | (A''*B)'      | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 0      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | (A''*B)'      | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|top         | PCIN+(A''*B)' | 16     | 10     | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 9      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | C'+(A''*B)'   | 16     | 8      | 18     | -      | 0      | 2    | 0    | 0    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 4      | -      | -      | 26     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | C+(A''*B)'    | 16     | 5      | 27     | -      | 0      | 2    | 0    | 0    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 5      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 6      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 6      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 6      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 7      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 7      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 7      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 7      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 7      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 33     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | C'+(A''*B)'   | 16     | 8      | 18     | -      | 0      | 2    | 0    | 0    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 8      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 7      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 7      | -      | -      | 0      | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|top         | PCIN+(A''*B)' | 16     | 7      | -      | -      | 30     | 2    | 0    | -    | -    | -     | 1    | 0    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |xadc_wiz_0    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |xadc_wiz |     1|
+|2     |BUFG     |     1|
+|3     |CARRY4   |  1195|
+|4     |DSP48E1  |    87|
+|8     |LUT1     |   305|
+|9     |LUT2     |  2512|
+|10    |LUT3     |   354|
+|11    |LUT4     |   232|
+|12    |LUT5     |    62|
+|13    |LUT6     |   110|
+|14    |FDRE     |  4734|
+|15    |FDSE     |   345|
+|16    |IBUF     |    11|
+|17    |OBUF     |    17|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:30 ; elapsed = 00:02:33 . Memory (MB): peak = 1483.719 ; gain = 644.410
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:59 ; elapsed = 00:02:23 . Memory (MB): peak = 1483.719 ; gain = 570.098
+Synthesis Optimization Complete : Time (s): cpu = 00:02:31 ; elapsed = 00:02:33 . Memory (MB): peak = 1483.719 ; gain = 644.410
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.294 . Memory (MB): peak = 1496.816 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1282 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'sinc_smoother' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1504.465 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 6b909635
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:48 ; elapsed = 00:02:53 . Memory (MB): peak = 1504.465 ; gain = 1042.609
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ravis/source/repos/CEE575/b3_proj/sinc_smoother_2/sinc_smoother_2.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 25 19:23:26 2023...

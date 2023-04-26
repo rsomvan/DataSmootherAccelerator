@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Tue Apr 18 01:21:26 2023
+| Date             : Tue Apr 25 16:19:39 2023
 | Host             : Laptop running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.113        |
+| Total On-Chip Power (W)  | 0.101        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.041        |
+| Dynamic (W)              | 0.030        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.4         |
-| Junction Temperature (C) | 25.6         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.006 |        3 |       --- |             --- |
-| Slice Logic    |     0.013 |     4871 |       --- |             --- |
-|   LUT as Logic |     0.011 |     1279 |     20800 |            6.15 |
-|   CARRY4       |     0.001 |      307 |      8150 |            3.77 |
+| Clocks         |     0.005 |        3 |       --- |             --- |
+| Slice Logic    |     0.008 |     4868 |       --- |             --- |
+|   LUT as Logic |     0.007 |     1276 |     20800 |            6.13 |
+|   CARRY4       |    <0.001 |      307 |      8150 |            3.77 |
 |   Register     |    <0.001 |     2311 |     41600 |            5.56 |
 |   Others       |     0.000 |       25 |       --- |             --- |
-| Signals        |     0.014 |     4622 |       --- |             --- |
+| Signals        |     0.009 |     4621 |       --- |             --- |
 | I/O            |     0.006 |       26 |       106 |           24.53 |
 | XADC           |     0.002 |        1 |       --- |             --- |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.113 |          |           |                 |
+| Total          |     0.101 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.043 |       0.033 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.032 |       0.022 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,17 +141,17 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| top                |     0.041 |
+| top                |     0.030 |
 |   XLXI_7           |     0.002 |
-|   rs0              |     0.032 |
-|     genblk1[0].ds0 |     0.002 |
-|     genblk1[1].ds0 |     0.002 |
-|     genblk1[2].ds0 |     0.002 |
-|     genblk1[3].ds0 |     0.002 |
-|     genblk1[4].ds0 |     0.002 |
-|     genblk1[5].ds0 |     0.002 |
-|     genblk1[6].ds0 |     0.002 |
-|     genblk1[7].ds0 |     0.002 |
+|   rs0              |     0.021 |
+|     genblk1[0].ds0 |     0.001 |
+|     genblk1[1].ds0 |     0.001 |
+|     genblk1[2].ds0 |     0.001 |
+|     genblk1[3].ds0 |     0.001 |
+|     genblk1[4].ds0 |     0.001 |
+|     genblk1[5].ds0 |     0.001 |
+|     genblk1[6].ds0 |     0.001 |
+|     genblk1[7].ds0 |     0.001 |
 +--------------------+-----------+
 
 

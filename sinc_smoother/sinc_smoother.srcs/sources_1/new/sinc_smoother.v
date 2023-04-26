@@ -30,11 +30,13 @@ module sinc_smoother(
     );
     
     reg [15:0] data_hldr [`N-2:0];
-    reg [(`Q_BITS + `D_BITS) - 1 : 0] conv_hldr [`N - 1: 0];
+    reg [(`Q_BITS + `D_BITS) : 0] conv_hldr [`N - 1: 0];
     reg [`N-2:0] valid_hldr=0;
-    reg [1:0] valid_in_reg=0;
-    reg [(`Q_BITS + `D_BITS) - 1:0] p_sum=0;
-    reg [(`Q_BITS + `D_BITS) - 1:0] n_sum=0;
+    reg [2:0] valid_in_reg=0;
+    reg [(`Q_BITS + `D_BITS) + 1 :0] p_sum=0;
+    reg [(`Q_BITS + `D_BITS) - 1 :0] p_sum_small=0;
+    reg [(`Q_BITS + `D_BITS)  + 1:0] n_sum=0;
+    reg [(`Q_BITS + `D_BITS) -1 :0] n_sum_small=0;
     integer i=1;
     integer j=0;
     integer z=0;
@@ -57,12 +59,29 @@ module sinc_smoother(
     
     // assign outputs
     // valid_out must be delayed 2 clock cycles (1 to add to data_hldr, 1 to perform the multiplication)
-    assign valid_out = valid_in_reg[1];
+    assign valid_out = valid_in_reg[2];
     
     // assign the final sum
-    assign data_out = (p_sum - n_sum) >> `Q_BITS;
+    assign data_out = (p_sum_small - n_sum_small) >> `Q_BITS;
     
+    // make the values appropriately sized
     
+    always @(posedge clk) begin
+        if (p_sum > 33'h7FFFFFFF) begin
+            p_sum_small <= 31'h7FFFFFFF;
+        end
+        else begin
+            p_sum_small <= p_sum[30:0];
+        end
+        
+        
+        if (n_sum > 33'h7FFFFFFF) begin
+            n_sum_small <= 31'h7FFFFFFF;
+        end
+        else begin
+            n_sum_small <= n_sum[30:0];
+        end
+    end
     
     always @(*) begin
         n_sum = 0;
@@ -84,7 +103,7 @@ module sinc_smoother(
         // create proper shifts for the valid
         valid_in_reg[0] <= valid_in;
         valid_in_reg[1] <= valid_in_reg[0];
-
+        valid_in_reg[2] <= valid_in_reg[1];
         for (j = 0; j < `N; j = j + 1) begin
             if (j > 10) begin
                 conv_hldr[j] <= valid_hldr[j] ? coef[20 - j] * data_hldr[j] : 0;
